@@ -120,7 +120,7 @@ gulp.task('jekyll', function ( cb ) {
     });
 });
 
-gulp.task('pages', ['clean'], function ( cb ) {
+gulp.task('pages', ['clean', 'jekyll'], function ( cb ) {
 
     gulp.src( path.pages.parsed +'**' )
         .pipe( gulp.dest( path.pages.build ) )
@@ -183,10 +183,7 @@ gulp.task('watch', function () {
     gulp.watch( path.js.src + '**/*.js', ['scripts']);
 
     // Watch for changes to our raw pages
-    gulp.watch( path.pages.src +'**', ['jekyll']);
-
-    // Watch for changes to our parsed pages
-    gulp.watch( path.pages.parsed +'**/*.html', ['pages']);
+    gulp.watch( path.pages.src +'**', ['pages']);
 
     // Watch for changes to our SASS
     gulp.watch( [
