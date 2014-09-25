@@ -1,0 +1,21 @@
+{
+    "name": "frankbosma",
+    "version": "0.1.0",
+    "authors": [
+        "Frank Bosma"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "src",
+        "tests"
+    ],
+    "dependencies": {
+        "html5shiv": "3.7.2",
+        "jquery": "2.1.1",
+        "respond": "1.4.2",
+        "picturefill" : "2.1"
+    }
+}

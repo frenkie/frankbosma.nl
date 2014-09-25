@@ -1,0 +1,31 @@
+.text-image-row {
+    margin-bottom: 1em;
+}
+
+.text-image-image {
+    position: relative;
+    display: block;
+    width: 50%;
+    float: left;
+
+    margin: 0 12px 5px 0;
+
+    font-size: 0;
+
+    border: 4px solid $base-text-color;
+}
+
+.text-image-image-right {
+    float: right;
+    margin: 0 0 5px 12px;
+}
+
+.text-image-image-link {
+    display: inline-block;
+}
+
+.text-image-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}

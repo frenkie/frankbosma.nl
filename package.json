@@ -1,0 +1,26 @@
+{
+  "name": "frankbosma-nl",
+  "description": "Frank Bosma's personal website",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/frenkie/frankbosma.nl.git"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "del": "^0.1.1",
+    "event-stream": "^3.1.7",
+    "express": "^4.8.5",
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-concat": "^2.3.4",
+    "gulp-image-resize": "^0.5.0",
+    "gulp-jshint": "^1.8.4",
+    "gulp-livereload": "^2.1.0",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^3.0.0"
+  }
+}

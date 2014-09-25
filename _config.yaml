@@ -1,0 +1,10 @@
+source:         src/pages-raw
+destination:    src/pages-parsed
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      base: ""

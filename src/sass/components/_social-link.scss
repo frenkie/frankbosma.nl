@@ -1,0 +1,32 @@
+.social-link {
+    display: block;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+.social-link-icon {
+    position: relative;
+    top: 2px;
+}
+
+.social-link:hover .social-link-icon {
+    color: $base-text-color;
+}
+
+.social-link-icon.icon-twitter {
+    color: $fb-main-color;
+}
+
+.social-link-icon.icon-facebook {
+    top: 1px;
+    color: #154d91;
+}
+
+.social-link-icon.icon-github {
+    color: $fb-dark-support-color;
+}
+
+.social-link-icon.icon-linkedin {
+    top: 0;
+    color: #1a5eb1;
+}

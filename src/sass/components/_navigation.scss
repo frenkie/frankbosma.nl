@@ -1,0 +1,164 @@
+
+@include bp-max(xs) {
+
+    body {
+        position: relative;
+        left: 0;
+        transition: left 200ms;
+    }
+
+    body.navigation-visible {
+        left: 220px;
+    }
+
+    .js .main-navigation {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        bottom:0;
+        left: -220px;
+        width: 220px;
+        background-color: $base-text-color;
+
+        transition: left 200ms;
+    }
+
+    .main-navigation.navigation-visible {
+        left: 0;
+    }
+}
+
+/***********************/
+
+.main-navigation-profile-home-link {
+    display: block;
+    margin: 20px 0;
+
+    text-decoration: none;
+    text-align: center;
+}
+
+/***********************/
+
+.main-navigation-profile-image {
+    display: none;
+}
+
+@include bp-max(xs) {
+    .main-navigation-profile-image {
+        display: inline-block;
+
+        width: 140px;
+        height: 140px;
+
+        background: url('../img/frenkie-portret-s.jpg');
+
+        border-radius: 72px;
+        border: 2px solid white;
+        box-shadow: 2px 1px 4px rgba( 0, 0, 0, 0.5 );
+    }
+}
+/***********************/
+
+@include bp-max(xs) {
+    .main-nav-list {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+@include bp-min(s) {
+    .main-nav-list {
+        list-style: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/***********************/
+
+
+@include bp-min(s) {
+    .main-nav-item {
+        display: inline;
+        padding-right: 10px;
+    }
+
+    .main-nav-item-developer {
+        display: block;
+        padding: 0;
+    }
+}
+
+/***********************/
+
+.main-nav-item-icon {
+    display: none;
+}
+
+@include bp-max(xs) {
+    .main-nav-item-icon {
+        position: relative;
+        top: 0.15em;
+        display: inline;
+        padding-right: 0.25em;
+    }
+}
+
+/***********************/
+
+@include bp-max(xs) {
+    .main-nav-item-link {
+        display: block;
+        padding: 5px 10px 5px 24px;
+
+        background-color: $fb-dark-support-color;
+        border-bottom: 1px solid $fb-text-support-color;
+
+        @include font-def(2);
+        color: $fb-text-soft-color;
+        text-decoration: none;
+    }
+
+    .main-nav-item:first-child .main-nav-item-link {
+        border-top: 1px solid $fb-text-support-color;
+    }
+
+    .main-nav-item-link:link,
+    .main-nav-item-link:visited {
+        color: $fb-text-soft-color;
+    }
+
+    .main-nav-item-link:active,
+    .main-nav-item-link:hover,
+    .main-nav-item-selected .main-nav-item-link{
+        background-color: $fb-main-color;
+        color: white;
+    }
+}
+
+@include bp-min(s) {
+    .main-nav-item-link {
+        @include font-def(2);
+        color: $fb-text-support-color;
+        text-decoration: none;
+
+        transition: color 250ms;
+    }
+
+    .main-nav-item-link:link,
+    .main-nav-item-link:visited {
+        color: $fb-text-support-color;
+    }
+
+    .main-nav-item-developer .main-nav-item-link {
+        @include font-def(2.5);
+    }
+
+    .main-nav-item-link:active,
+    .main-nav-item-link:hover,
+    .main-nav-item-selected .main-nav-item-link{
+        color: $fb-main-color;
+    }
+}

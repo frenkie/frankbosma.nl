@@ -1,0 +1,3 @@
+[submodule "src/sass/Responsive"]
+	path = src/sass/Responsive
+	url = https://github.com/ResponsiveBP/Responsive.git

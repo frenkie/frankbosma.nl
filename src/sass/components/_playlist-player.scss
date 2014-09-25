@@ -1,0 +1,18 @@
+.playlist-player {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+@include bp-min(s) {
+    .playlist-player {
+        padding-bottom: 133.33%;
+    }
+}
+
+.playlist-player-embed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

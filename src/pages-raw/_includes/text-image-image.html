@@ -1,0 +1,32 @@
+{% if {{include.ext}} %}
+    {% assign ext = {{include.ext}} %}
+{% else %}
+    {% assign ext = 'jpg' %}
+{% endif %}
+
+{% if {{include.align}} == 'right' %}
+    {% assign extraClass = 'text-image-image-right' %}
+{% else %}
+    {% assign extraClass = '' %}
+{% endif %}
+
+<div class="text-image-image {{extraClass}}">
+
+    {% if {{include.href}} %}
+        <a href="{{include.href}}" class="text-image-image-link">
+    {% endif %}
+
+
+    <img src="{{ include.path }}-s.{{ ext }}"
+         srcset="{{ include.path }}-l.{{ ext }} 640w,
+                 {{ include.path }}-m.{{ ext }} 480w,
+                 {{ include.path }}-s.{{ ext }} 240w"
+         sizes="(min-width: 48em) 25vw,
+                50vw"
+         class="text-image-img"
+         alt="{{ include.title }}" />
+
+    {% if {{include.href}} %}
+        </a>
+    {% endif %}
+</div>
