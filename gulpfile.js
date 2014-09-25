@@ -106,7 +106,7 @@ gulp.task('images', function ( cb ) {
 });
 
 // Install prerequisites. Use npm install and bower install before gulp install
-gulp.task('install', ['images','vendor', 'fonts', 'favicon']);
+gulp.task('install', ['images','vendor', 'fonts', 'favicon', 'sass', 'scripts', 'pages']);
 
 
 gulp.task('jekyll', function ( cb ) {
@@ -203,4 +203,4 @@ gulp.task('watch', function () {
 
 
 // Default Task
-gulp.task('default', ['sass', 'scripts']);
+gulp.task('default', ['install']);

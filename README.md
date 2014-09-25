@@ -22,4 +22,4 @@ respectively to install all prerequisites.
 
 Use `gulp watch` to start an ExpressJS server on [localhost:4000](http://localhost:4000),
 a [livereload](https://github.com/vohof/gulp-livereload) server and automatically
-generated CSS and HTML through SASS and Jekyll.
+generated CSS and HTML through SASS and Jekyll. Or use `gulp serve` to just serve up the site.
