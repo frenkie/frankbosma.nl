@@ -95,11 +95,6 @@
         display: inline;
         padding-right: 10px;
     }
-
-    .main-nav-item-developer {
-        display: block;
-        padding: 0;
-    }
 }
 
 /***********************/
@@ -161,10 +156,6 @@
     .main-nav-item-link:link,
     .main-nav-item-link:visited {
         color: $fb-text-support-color;
-    }
-
-    .main-nav-item-developer .main-nav-item-link {
-        @include font-def(2.5);
     }
 
     .main-nav-item-link:active,
