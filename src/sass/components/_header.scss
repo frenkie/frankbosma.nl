@@ -11,19 +11,19 @@
     }
 
     .home-main-header {
-        height: 270px;
+       // height: 270px;
     }
 }
 
 @include bp-min(m) {
    .home-main-header {
-       height: 320px;
+      // height: 320px;
    }
 }
 
 @include bp-min(l) {
    .home-main-header {
-       height: 340px;
+      // height: 340px;
    }
 }
 
@@ -35,7 +35,7 @@
 
 @include bp-min(s) {
 
-
+/*
     .home-main-header .main-header-background {
         position: absolute;
         z-index: 0;
@@ -60,6 +60,7 @@
 
         background-color: rgba(0, 0, 0, 0.3);
     }
+    */
 }
 
 /***********************/

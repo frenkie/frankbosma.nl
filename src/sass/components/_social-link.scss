@@ -4,6 +4,15 @@
     text-decoration: none;
 }
 
+.social-link,
+.social-link:link,
+.social-link:active,
+.social-link:visited,
+.social-link:hover {
+    color: $base-text-color;
+}
+
+
 .social-link-icon {
     position: relative;
     top: 2px;

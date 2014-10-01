@@ -72,3 +72,10 @@ a:active,
 a:hover {
     color: black;
 }
+
+code {
+    font-size: 0.8em;
+    background-color: $fb-text-soft-color;
+    color: $fb-dark-support-color;
+    padding: 0 5px;
+}

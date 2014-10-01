@@ -5,5 +5,6 @@
         navigation = new Navigation( document.querySelector('.main-navigation') );
 
         navigation.addTrigger( document.querySelector('.main-header-show-navigation') );
+        navigation.addTrigger( document.querySelector('.main-content-hitrect') );
     }
 
