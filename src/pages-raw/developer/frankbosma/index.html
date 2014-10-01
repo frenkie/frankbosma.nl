@@ -3,3 +3,61 @@ layout: default
 base: ../../
 title: frankbosma.nl
 ---
+
+<div class="row">
+    <div class="col-s-8 offset-s-2">
+
+        <h1>frankbosma.nl</h1>
+
+        <p>
+            The code and frontend setup of this website is available on
+            <a href="https://github.com/frenkie/frankbosma.nl">Github</a>. It uses quite some
+            stuff that I wanted to check out for automated site content and code generation.
+        </p>
+
+        <h2 class="h4">Build tool / task automation</h2>
+        <p>
+            To handle webpage generation, dependency management, SASS -&gt; CSS translation,
+            minification of CSS and JavaScript, image creation and maintain a development server
+            that refreshes the site automatically with every change, I started using
+            <a href="http://gulpjs.com/">Gulp</a>. It let's me do all the build steps individually
+            or in parallel so I can have an install task that creates a production ready version of the site
+            with one command.
+        </p>
+
+        <h2 class="h4">CMS</h2>
+        <p>
+            I use <a href="http://jekyllrb.com">Jekyll</a> as a website / pages generator. Jekyll
+            let's you easily generate webpages with Markdown or HTML and a templating language.
+        </p>
+
+        <h2 class="h4">Responsiveness</h2>
+        <p>
+            The <a href="responsivebp.com">Responsive</a> SASS framework is included as a
+            <a  href="http://git-scm.com/docs/git-submodule">Git submodule</a>. I only
+            use it's simple responsive grid mixins. Compared to Bootstrap it doesn't add the visual
+            styles and it's easy to just use parts of it through SASS. The submodule system
+            allows me to not have to include the entire framework in my repository and to
+            easily benefit from updates.
+        </p>
+        <p>
+            For responsive images I'm using the <a href="https://github.com/scottjehl/picturefill">&lt;picture&gt; polyfill</a> and
+            through reading <a href="http://ericportis.com/posts/2014/srcset-sizes/"></a> I've noticed that with a combination of <code>srcset</code> and
+            <code>sizes</code> attributes you get the best responsive image results. Images are
+            then chosen based on viewport size, screen resolution and the width of the image component.
+        </p>
+        <p>
+            The different image sizes are generated from a source file through the
+            <a href="">gulp-image-resize</a> plugin that's talking
+            to <a href="http://www.graphicsmagick.org/">GraphicsMagick</a> or
+            <a href="http://www.imagemagick.org/">ImageMagick</a>.
+        </p>
+
+        <h2 class="h4">JavaScript dependencies</h2>
+        <p>
+            <a href="http://bower.io">Bower</a> is working excellent as a frontend dependency
+            manager to download all the right versions of external JavaScript files like html5shiv or
+            the &lt;picture&gt; polyfill.
+        </p>
+    </div>
+</div>

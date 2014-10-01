@@ -44,7 +44,7 @@
     </a>
 
     {% assign navigation = 'developer,t-shirts,illustrations,playlists,foosball,contact' | split:',' %}
-    {% assign navIcons = 'code,tee,pencil,music,table-soccer,chat' | split:',' %}
+    {% assign navIcons = ',code,tee,pencil,music,table-soccer,chat' | split:',' %}
     {% assign activePath =  page.path | split:'/' | first %}
 
     <ul class="main-nav-list">
@@ -57,3 +57,5 @@
     {% endfor %}
     </ul>
 </nav>
+
+<div class="main-content-hitrect"></div>
