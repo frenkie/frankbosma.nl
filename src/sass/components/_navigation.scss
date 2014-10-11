@@ -18,7 +18,11 @@
         bottom: 0;
         left: -220px;
         width: 220px;
+
+        overflow-y: auto;
+
         background-color: $base-text-color;
+
 
         transition: left 200ms;
     }

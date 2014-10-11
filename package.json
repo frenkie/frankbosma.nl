@@ -5,7 +5,7 @@
     "type" : "git",
     "url" : "https://github.com/frenkie/frankbosma.nl.git"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "devDependencies": {
     "del": "^0.1.1",
     "event-stream": "^3.1.7",
