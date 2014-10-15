@@ -73,7 +73,7 @@ var vendorSrc = [
 gulp.task('clean', function (cb) {
     del([
         'build/*',
-        '!build/{css,css/**,vendor,vendor/**,img,img/**,js,js/**,fonts,fonts/**,favicon.ico}'
+        '!build/{css,css/**,vendor,vendor/**,img,img/**,js,js/**,fonts,fonts/**,favicon\.ico}'
     ], cb);
 });
 
