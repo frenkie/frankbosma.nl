@@ -73,6 +73,10 @@ a:hover {
     color: black;
 }
 
+a:focus {
+    outline: none;
+}
+
 code {
     font-size: 0.8em;
     background-color: $fb-text-soft-color;
