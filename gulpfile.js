@@ -70,7 +70,7 @@ var vendorSrc = [
  * TASKS
  ******************************/
 
-gulp.task('clean', function (cb) {
+gulp.task('clean-pages', function (cb) {
     del([
         'build/*',
         '!build/{css,css/**,vendor,vendor/**,img,img/**,js,js/**,fonts,fonts/**,favicon\.ico}'
@@ -120,7 +120,7 @@ gulp.task('jekyll', function ( cb ) {
     });
 });
 
-gulp.task('pages', ['clean', 'jekyll'], function ( cb ) {
+gulp.task('pages', ['clean-pages', 'jekyll'], function ( cb ) {
 
     gulp.src( path.pages.parsed +'**' )
         .pipe( gulp.dest( path.pages.build ) )
