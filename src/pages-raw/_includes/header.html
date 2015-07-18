@@ -9,6 +9,11 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700|Lora' rel='stylesheet' type='text/css'>
     <link href="{{ page.base }}css/fb.min.css" rel="stylesheet" />
 
+    {% if page.gallery %}
+    <link href="{{ page.base }}vendor/photoswipe.css" rel="stylesheet" />
+    <link href="{{ page.base }}vendor/default-skin.css" rel="stylesheet" />
+    {% endif %}
+
     <script>
         if ( document.querySelector ) {
             document.querySelector('html').className = 'js';
@@ -19,6 +24,12 @@
     <script src="{{ page.base }}vendor/respond.min.js"></script>
     <![endif]-->
     <script src="{{ page.base }}vendor/picturefill.min.js"></script>
+
+    {% if page.gallery %}
+    <script src="{{ page.base }}vendor/photoswipe.min.js"></script>
+    <script src="{{ page.base }}vendor/photoswipe-ui-default.min.js"></script>
+    {% endif %}
+
 </head>
 <body>
 

@@ -1,13 +1,14 @@
 {
-    "name": "frankbosma-nl",
-    "version": "0.1.0",
-    "authors": [
-        "Frank Bosma"
-    ],
-    "license": "MIT",
-    "dependencies": {
-        "html5shiv": "3.7.2",
-        "respond": "1.4.2",
-        "picturefill" : "2.1"
-    }
+  "name": "frankbosma-nl",
+  "version": "0.2.0",
+  "authors": [
+    "Frank Bosma"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "html5shiv": "3.7.2",
+    "respond": "1.4.2",
+    "picturefill": "2.1",
+    "photoswipe": "~4.0.7"
+  }
 }

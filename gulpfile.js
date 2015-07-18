@@ -62,7 +62,12 @@ var vendorSrc = [
     path.vendor.src +'html5shiv/dist/html5shiv.min.js',
     path.vendor.src +'jquery/dist/jquery.min.js',
     path.vendor.src +'respond/dest/respond.min.js',
-    path.vendor.src +'picturefill/dist/picturefill.min.js'
+    path.vendor.src +'picturefill/dist/picturefill.min.js',
+    path.vendor.src +'photoswipe/dist/photoswipe.min.js',
+    path.vendor.src +'photoswipe/dist/photoswipe.js',
+    path.vendor.src +'photoswipe/dist/photoswipe-ui-default.min.js',
+    path.vendor.src +'photoswipe/dist/photoswipe.css',
+    path.vendor.src +'photoswipe/dist/default-skin/*'
 ];
 
 
