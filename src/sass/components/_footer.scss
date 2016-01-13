@@ -1,3 +1,10 @@
 .main-footer {
     height: 40px;
 }
+
+
+@include bp-max(xs) {
+    .github-ribbon {
+        width: 102px;
+    }
+}
