@@ -57,6 +57,9 @@ var jsSrc = [
     path.js.src +'suffix.js'
 ];
 var imgSrc = images.getImageSources( path.img.src, path.img.build );
+var imgAssetsSrc = [
+    path.img.src +'github.png'
+];
 var sassSrc = path.sass.src + 'fb.scss';
 var vendorSrc = [
     path.vendor.src +'html5shiv/dist/html5shiv.min.js',
@@ -105,8 +108,14 @@ gulp.task('images', function ( cb ) {
     });
 
     del(['build/img'], function () {
-        es.concat.apply(es, imageTasks)
-                .on('end', cb);
+
+        gulp.src( imgAssetsSrc )
+            .pipe( gulp.dest( path.img.build ) )
+            .on('end', function () {
+                es.concat
+                  .apply(es, imageTasks)
+                  .on('end', cb);
+            });
     });
 });
 
