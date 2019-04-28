@@ -144,7 +144,10 @@ gulp.task('pages', ['clean-pages', 'jekyll'], function ( cb ) {
 // Concatenate & Minify SCSS
 gulp.task('sass', function ( cb ) {
     gulp.src( sassSrc )
-        .pipe( plugins.rubySass({ unixNewlines: true, precision: 4, noCache: true }) )
+        .pipe( plugins.rubySass({
+            unixNewlines: true,
+            precision: 4,
+            noCache: true }) )
         .pipe( plugins.autoprefixer('last 2 version', '> 1%', 'ie 8', { cascade: true }) )
         .pipe( gulp.dest( path.sass.build ) )
         .pipe( plugins.rename({ suffix: '.min' }) )
