@@ -1,0 +1,56 @@
+// COLORS
+
+$soft-color-1: #74D0E7;
+$soft-color-2: #CCF5AC;
+$soft-color-3: lightpink;
+
+
+$main-color: #1f92cc;
+$main-color-dark: #156289;
+
+// / COLORS
+
+
+// TYPOGRAPHY
+
+$title-font: 'Source Sans Pro', sans-serif;
+$base-font: 'Lora', Times, serif;
+$icon-font: 'fb14';
+
+%base-font {
+    font-family: $base-font;
+    color: rgba( 0, 0, 0, 0.8 );
+}
+
+%title-font {
+    font-family: $title-font;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+}
+
+%icon-font {
+    font-family: $icon-font;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$text-color: #333;
+
+
+// / TYPOGRAPHY
+
+// LAYOUT
+
+$bu: 8px;
+$bp-max-mobile: 768px;
+$bp-min-desktop: 769px;
+
+// / LAYOUT

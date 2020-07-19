@@ -1,26 +1,34 @@
 {
-  "name": "frankbosma-nl",
-  "description": "Frank Bosma's personal website",
+  "name": "frankbosma",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/frenkie/frankbosma.nl.git"
   },
-  "version": "0.2.0",
-  "devDependencies": {
-    "del": "~0.1.1",
-    "event-stream": "~3.1.7",
-    "express": "~4.8.5",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "0.0.8",
-    "gulp-concat": "~2.3.4",
-    "gulp-image-resize": "~0.5.0",
-    "gulp-jshint": "~1.8.4",
-    "gulp-livereload": "~2.1.0",
-    "gulp-load-plugins": "~0.5.3",
-    "gulp-minify-css": "~0.3.7",
-    "gulp-rename": "~1.2.0",
-    "gulp-ruby-sass": "~0.7.1",
-    "gulp-uglify": "~0.3.1",
-    "gulp-util": "~3.0.0"
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "dev:offline": "STATIC=true npm run dev",
+    "build": "next build",
+    "preexport": "STATIC=true next build",
+    "export": "next export",
+    "serve:export": "http-server ./out -p 3001",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "~3.0.0-beta.48",
+    "axios": "~0.19.2",
+    "classnames": "~2.2.6",
+    "graphql": "~15.0.0",
+    "http-server": "~0.12.3",
+    "next": "9.4.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-lazy-load": "~3.1.13",
+    "react-markdown": "~4.3.1",
+    "react-reveal": "~1.2.2",
+    "sass": "~1.26.10"
   }
 }

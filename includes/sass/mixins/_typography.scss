@@ -1,0 +1,17 @@
+@import '../vars';
+
+@mixin base-font () {
+    @extend %base-font;
+}
+
+@mixin icon-font () {
+    @extend %icon-font;
+}
+
+@mixin title-font () {
+    @extend %title-font;
+}
+
+@mixin font-def ( $multiplier ) {
+    font-size: $bu * $multiplier;
+}

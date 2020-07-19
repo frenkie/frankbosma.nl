@@ -1,0 +1,131 @@
+@import '../includes/sass/vars';
+@import '../includes/sass/mixins/all';
+
+.main {
+    padding: 16px;
+    padding-bottom: 36px;
+    background-color: $soft-color-1;
+    color: black;
+}
+
+@include bp-desktop () {
+    .main {
+        padding: 24px;
+        padding-bottom: 36px;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+
+    align-items: center;
+}
+
+@include bp-desktop () {
+    .header {
+        justify-content: center;
+    }
+}
+
+.header__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: 2px solid white;
+    box-shadow: 2px 1px 4px rgba( 0, 0, 0, 0.5 );
+
+    transition: all ease-out 150ms;
+    transform: rotateZ(-3deg) scale(1);
+
+    &:hover {
+        transform: rotateZ(0deg) scale(1.1);
+    }
+}
+
+@include bp-desktop () {
+
+    .header__image {
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+    }
+}
+
+.header__title {
+    @include title-font();
+    @include font-def(4);
+    margin: 0 0 0 16px;
+}
+
+@include bp-desktop () {
+    .header__title {
+        @include font-def(5);
+        margin-right: 80px;
+    }
+}
+
+.intro {
+
+    p {
+        margin-top: 0;
+        line-height: 1.5em;
+    }
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        transition: color ease-out 100ms;
+        color: black;
+    }
+
+    a:hover {
+        color: $main-color-dark;
+    }
+}
+
+@include bp-desktop () {
+    .intro {
+        margin: 0 auto;
+        max-width: var( --max-content-width );
+    }
+}
+
+.intro__title {
+    @include title-font();
+    @include font-def(3);
+}
+
+@include bp-desktop () {
+    .intro__title {
+
+    }
+}
+
+.footer {
+    position: relative;
+    padding: 40px 16px;
+    background-color: white;
+
+    &::before {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        display: block;
+        content:"";
+        width: 0;
+        height:0;
+        border-top: 20px solid transparent;
+        border-right: 100vw solid white;
+    }
+}
+
+@include bp-desktop () {
+    .footer {
+        padding: 30px 24px;
+    }
+}

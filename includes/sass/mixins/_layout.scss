@@ -1,0 +1,12 @@
+@mixin bp-mobile-only () {
+
+    @media all and ( max-width: $bp-max-mobile ) {
+        @content;
+    }
+}
+
+@mixin bp-desktop () {
+    @media all and ( min-width: $bp-min-desktop ) {
+        @content;
+    }
+}

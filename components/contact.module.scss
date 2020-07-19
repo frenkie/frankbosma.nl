@@ -1,0 +1,81 @@
+@import '../includes/sass/vars';
+@import '../includes/sass/mixins/all';
+
+.container {
+    margin: 0 auto;
+    max-width: var( --max-content-width );
+    line-height: 1.5em;
+}
+
+.title {
+    margin: 4px 0;
+    @include title-font();
+    @include font-def(4);
+}
+
+@include bp-desktop () {
+    .title {
+        @include font-def(5);
+    }
+}
+
+.title__icon {
+    margin-left: 4px;
+    font-size: .9em;
+}
+
+.social {
+    display: flex;
+}
+
+.social__link {
+    display: block;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    text-decoration: none;
+    transition: text-decoration ease-in 200ms;
+}
+
+.social__link,
+.social__link:link,
+.social__link:active,
+.social__link:visited,
+.social__link:hover {
+    color: $text-color;
+}
+
+.social__link:active,
+.social__link:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    position: relative;
+    top: 2px;
+    
+    @include icon-font ();
+
+    transition: color ease-in 100ms;
+
+    .social__link:hover & {
+        color: $text-color;        
+    }
+}
+
+.icon--twitter {
+    color: $main-color;
+}
+
+.icon--facebook {
+    top: 1px;
+    color: #154d91;
+}
+
+.icon--github {
+    color: #7d8287;
+}
+
+.icon--linkedin {
+    top: 0;
+    color: #1a5eb1;
+}

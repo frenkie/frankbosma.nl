@@ -1,25 +1,49 @@
-# frankbosma.nl
+frankbosma.nl is made with [Next.js](https://nextjs.org/) and [Strapi](http://strapi.io/)
 
-The repository for [frankbosma.nl](http://frankbosma.nl)
+## Getting Started
 
-## Installation
-Use `git clone --recursive` to install this repository including the submodule
-[Responsive](https://github.com/responsivebp/responsive), which I'm using as
- a SASS responsive grid framework.
+First things first: use [Node.js](https://nodejs.org/en/) >= v10.
+Do an `npm install` to install all necessary requirements.
 
+### Offline mode / if you don't have the Strapi CMS and database
+run the development server in offline mode:
 
-### prerequisites
-Frankbosma.nl uses [Jekyll](http://jekyllrb.com/) to generate pages and 
-[GraphicsMagick](http://www.graphicsmagick.org/) or [ImageMagick](http://www.imagemagick.org/)
-for image resizing through the [gulp-image-resize](https://www.npmjs.org/package/gulp-image-resize) plugin.
-Install Jekyll and one of the magicks, preferably GraphicsMagick.
-I'm also using [NPM](https://www.npmjs.org), [Gulp](http://gulpjs.com/) and [Bower](http://bower.io/), so install them as well
-if not already available.
+```bash
+npm run dev:offline
+```
 
-### then
-After installing NodeJS, NPM, Jekyll, an image tool, Gulp and Bower, use `npm install`, `bower install` and `gulp install`
-respectively to install all prerequisites.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the website.
 
-Use `gulp watch` to start an ExpressJS server on [localhost:4000](http://localhost:4000),
-a [livereload](https://github.com/vohof/gulp-livereload) server and automatically
-generated CSS and HTML through SASS and Jekyll. Or use `gulp serve` to just serve up the site.
+The website will run with static CMS data as defined in `next.config.js`, environment
+variable `NEXT_PUBLIC_DATA_PATH`. 
+
+### Create a static version
+frankbosma.nl can be built as a static website with no need for a NodeJS back end. 
+For that run the development server in offline (`npm run dev:offline`) mode 
+and build the static version through `npm run export`.
+
+The static version makes use of the static data as configured in `next.config.js`, 
+environment variable `NEXT_PUBLIC_DATA_PATH`. The running server is needed to fetch
+the data. 
+
+A static version of the site is created under `/out` which you can then run on any
+web server.
+
+Or you can try it out locally with `npm run serve:export` and visit 
+[http://localhost:3001](http://localhost:3001).
+ 
+### Using Strapi
+When Strapi is installed, including the 
+[GraphQL plugin](https://strapi.io/documentation/3.0.0-beta.x/plugins/graphql.html),
+you can run regular dev mode `npm run dev` 
+so content is fetched on the fly from the Strapi database. 
+
+Appropriate API URLs are configured in the `.env` in the root. See the Next.js
+docs on [environment variables](https://nextjs.org/docs/basic-features/environment-variables)
+for local / test / production configuration if you need that.
+
+#### Todo
+Of course you need the proper database content in order to use Strapi with
+frankbosma.nl. I will update this repository soon with the setup. Of course if you're
+eager you can reverse engineer it through the GraphQL content of `/pages/api/home.js`
+or the GraphQL schema in `/strapi`.
