@@ -112,15 +112,17 @@
 
     &::before {
         position: absolute;
-        top: -20px;
+        top: -25px;
         left: 0;
         right: 0;
         display: block;
         content:"";
-        width: 0;
-        height:0;
-        border-top: 20px solid transparent;
-        border-right: 100vw solid white;
+        height: 25px;
+        background: linear-gradient(179deg, #CCF5AC 50%, white 51%) 0 0;
+        background-size: 210% 50px;
+        background-color: #CCF5AC;
+        background-repeat: repeat-x;
+        background-position-x: -95%;
     }
 }
 

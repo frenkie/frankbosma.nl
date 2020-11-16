@@ -10,9 +10,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "dev:offline": "STATIC=true npm run dev",
+    "dev:offline": "cross-env STATIC=true npm run dev",
     "build": "next build",
-    "preexport": "STATIC=true next build",
+    "preexport": "cross-env STATIC=true next build",
     "export": "next export",
     "serve:export": "http-server ./out -p 3001",
     "start": "next start"
@@ -21,6 +21,7 @@
     "@apollo/client": "~3.0.0-beta.48",
     "axios": "~0.19.2",
     "classnames": "~2.2.6",
+    "cross-env": "^7.0.2",
     "graphql": "~15.0.0",
     "http-server": "~0.12.3",
     "next": "9.4.1",

@@ -12,8 +12,8 @@
         position: absolute;
         top: -25px;
         left: 0;
+        right: 0;
         content: '';
-        width: 100vw;
         height: 25px;
         background: linear-gradient(152deg, $soft-color-1 25%, transparent 25%) 0 0,
         linear-gradient(208deg, $soft-color-1 25%, transparent 25%) 0 0;
