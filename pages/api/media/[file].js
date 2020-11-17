@@ -75,7 +75,7 @@ export default (req, res) => {
             if ( ! Fs.existsSync( path ) ) {
                 downloadImage( fileName ).then( () => {
 
-                    serveFile( res, Path.resolve( SERVE_PATH, fileName ) );
+                    serveFile( res, Path.join( SERVE_PATH, fileName ) );
                     resolve();
 
                 }, () => {
@@ -84,7 +84,7 @@ export default (req, res) => {
                     reject();
                 } );
             } else {
-                serveFile( res, Path.resolve( SERVE_PATH, fileName ) );
+                serveFile( res, Path.join( SERVE_PATH, fileName ) );
                 resolve();
             }
         }
