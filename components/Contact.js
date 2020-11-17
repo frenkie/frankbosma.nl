@@ -7,7 +7,7 @@ export default function Contact ({ description }) {
 
     const contactPoints = [
         { link : 'https://github.com/frenkie', label: 'github', iconClassName: 'github' },
-        { link : 'https://linkedin.com/frenkie', label: 'linkedin', iconClassName: 'linkedin' },
+        { link : 'https://linkedin.com/in/frankbosma', label: 'linkedin', iconClassName: 'linkedin' },
         { link : 'https://facebook.com/frenkie', label: 'facebook', iconClassName: 'facebook' },
     ].map( contactItem => {
 
