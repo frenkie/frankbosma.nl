@@ -31,3 +31,16 @@ body {
 }
 
 @import './components/icons';
+
+/* for PDF styling reasons */
+
+@media print {
+    .page-break {
+        page-break-before: always;
+        padding-top: 60px;
+    }
+}
+
+
+
+

@@ -1,0 +1,143 @@
+@import '../includes/sass/vars';
+@import '../includes/sass/mixins/all';
+
+.main {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: $text-color;
+    font-size: 70%;
+}
+
+@include bp-desktop () {
+    .main {
+        font-size: 70%;
+    }
+}
+
+/**********************************   Left Side   ****************************************/
+
+.sidebar {
+    background-color: #3e4357;
+    color: $soft-color-2;
+    max-width: 280px;
+}
+
+.section-title {
+    @include title-font();
+    @include font-def(4);
+    margin: 0 0 16px 0;
+}
+
+.section-title--sidebar {
+    font-size: 180%;
+    padding-bottom: 6px;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: $soft-color-1;
+    text-underline-offset: 10px;
+}
+
+.section-title--experience{
+    padding-bottom: 24px;
+}
+
+.profile {
+    background-color: $soft-color-1;
+    color: $text-color;
+}
+
+.profile__picture {
+    width: 100%;
+    max-width: 300px;
+}
+
+.profile__meta {
+    margin: 8px 24px;
+    padding-bottom: 12px;
+}
+
+.full-name {
+    font-weight: bold;
+}
+.role {
+    font-weight: bold;
+}
+.data {
+
+}
+
+.education,
+.social,
+.skills,
+.spare-time {
+    padding-bottom: 24px;
+    margin: 32px 26px 16px;
+}
+
+.education {
+    padding-top: 60px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-link {
+    padding-bottom: 1em;
+}
+
+.social-link__label {
+    font-weight: bold;
+    font-size: 100%;
+}
+.social-link__hyperlink {
+    color: $soft-color-2;
+    font-size: 80%;
+    text-decoration: none;
+}
+
+.education__period,
+.education__title { font-weight: bold;}
+.education__school {}
+
+.education__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education__list-item {
+    padding-bottom: 2em;
+}
+
+/**********************************   Right Side   ****************************************/
+
+.track-record {
+    padding: 60px 45px;
+}
+
+.about-me {
+
+    margin-bottom: 60px;
+
+    p {
+        margin-top: 0;
+        line-height: 1.5em;
+    }
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        transition: color ease-out 100ms;
+        color: black;
+    }
+
+    a:hover {
+        color: $main-color-dark;
+    }
+}

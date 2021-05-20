@@ -1,0 +1,146 @@
+@import '../includes/sass/vars';
+@import '../includes/sass/mixins/all';
+
+.project {
+    max-width: 1024px;
+    margin: 0 auto 40px;
+}
+
+.title {
+    margin: 4px 0;
+    @include title-font();
+    @include font-def(2.5);
+}
+
+.period {
+    font-family: $base-font;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: normal;
+    padding-left: 5px;
+}
+
+.job {
+    font-size: 100%;
+    font-weight: bold;
+    margin: 4px 0;
+    line-height: 1.4em;
+}
+
+.shoutout {
+    font-size: 80%;
+    margin: 4px 0;
+    line-height: 1.4em;
+}
+
+.summary {
+    margin: 12px 0;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        transition: color ease-out 100ms;
+        color: black;
+    }
+
+    a:hover {
+        color: $main-color-dark;
+    }
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0 22px;
+    padding: 4px 16px;
+    color: white;
+    font-size: .8em;
+
+    transition: transform ease-out 100ms, font-size ease-out 110ms;
+
+    &,
+    &:hover,
+    &:visited,
+    &:active {
+        text-decoration: none;
+    }
+
+    &:hover  {
+        transform: scale(1.1);
+        font-size: .9em;
+    }
+
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        transition: transform ease-out 100ms;
+        transform: scale(1);
+
+        background-color: black;
+    }
+}
+
+.link-text {
+    position: relative;
+    z-index: 1;
+}
+
+.tag-list {
+
+    margin: 10px 0 6px;
+
+    dt { display: none; }
+    dd { margin: 0; }
+}
+
+.tag {
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    padding: 0 4px 0 3px;
+    margin: 0 12px 4px 0;
+
+    background-color: $soft-color-3;
+
+    line-height: 24px;
+    font-family: $title-font;
+    font-size: 15px;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: -4px;
+        display: block;
+        content:"";
+        width: 0;
+        height: 0;
+        border-bottom: solid 24px transparent;
+        border-right: 4px solid $soft-color-3;
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: -4px;
+        display: block;
+        content:"";
+        width: 0;
+        height: 0;
+        border-top: solid 24px transparent;
+        border-left: 4px solid $soft-color-3;
+    }
+}
+
+.tag-divider {
+    display: none;
+}
+
