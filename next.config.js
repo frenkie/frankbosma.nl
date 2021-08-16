@@ -4,7 +4,7 @@ module.exports = {
         // for fetching static data / images instead of Strapi content
         // Prerequisite is that images and data (as referenced in the below file) are available in the /public folder
 
-        NEXT_PUBLIC_DATA_PATH: '/data/20210520-home.json', // will be fetched client side
-        NEXT_PUBLIC_DATA_PATH_RESUME: '/data/20210520-resume.json' // will be fetched client side
+        NEXT_PUBLIC_DATA_PATH: '/data/20210816-home.json', // will be fetched client side
+        NEXT_PUBLIC_DATA_PATH_RESUME: '/data/20210816-resume.json' // will be fetched client side
     }
 };
