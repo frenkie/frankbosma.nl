@@ -34,8 +34,9 @@ export default function Resume({ resume }) {
                             <span className={styles.role}>{resume.role}</span>
                         </div>
                         <div className={styles['profile__meta']}>
+                            <span className={styles.data}>{resume.phone}</span><br />
                             <span className={styles.data}>{resume.email}</span><br />
-                            <span className={styles.data}>{resume.phone}</span>
+                            <span className={styles.data}>{resume.birth_date.split('-').reverse().join('-')}</span>
                         </div>
                     </section>
                     <section className={styles.social}>

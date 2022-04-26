@@ -12,6 +12,7 @@ export default (req, res) => {
                     about_me,
                     full_name,
                     email,
+                    birth_date,
                     phone,
                     profile {
                       ext,
