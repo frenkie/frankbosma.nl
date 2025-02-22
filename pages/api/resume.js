@@ -14,6 +14,7 @@ export default (req, res) => {
                     email,
                     birth_date,
                     phone,
+                    website,
                     profile {
                       ext,
                       formats,

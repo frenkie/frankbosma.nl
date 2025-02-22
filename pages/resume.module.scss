@@ -26,7 +26,7 @@
 .section-title {
     @include title-font();
     @include font-def(4);
-    margin: 0 0 16px 0;
+    margin: 0 0 8px 0;
 }
 
 .section-title--sidebar {
@@ -66,17 +66,32 @@
 .data {
 
 }
+.data__hyperlink,
+.data__hyperlink:visited,
+.data__hyperlink:active,
+.data__hyperlink:hover {
+    color: $text-color;
+    text-decoration: none;
+}
 
 .education,
 .social,
 .skills,
 .spare-time {
-    padding-bottom: 24px;
-    margin: 32px 26px 16px;
+    padding-bottom: 18px;
+    margin: 32px 26px 10px;
+}
+
+.social {
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+.skills {
+    margin-top: 0px;
 }
 
 .education {
-    padding-top: 95px;
+    padding-top: 75px;
 }
 
 .social-links {

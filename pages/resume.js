@@ -36,6 +36,7 @@ export default function Resume({ resume }) {
                         <div className={styles['profile__meta']}>
                             <span className={styles.data}>{resume.phone}</span><br />
                             <span className={styles.data}>{resume.email}</span><br />
+                            <a className={styles['data__hyperlink']} href={resume.website}>{resume.website}</a><br />
                             <span className={styles.data}>{resume.birth_date.split('-').reverse().join('-')}</span>
                         </div>
                     </section>
