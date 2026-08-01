@@ -2,8 +2,15 @@
 @import '../includes/sass/mixins/all';
 
 .project {
+    clear: both;;
     max-width: 1024px;
     margin: 0 auto 40px;
+}
+
+@media print {
+    .project {
+        margin-bottom: 15px;
+    }
 }
 
 .title {
@@ -48,6 +55,24 @@
     a:hover {
         color: $main-color-dark;
     }
+    
+    img {
+        float: left;
+        max-width: 310px;
+        max-height: 350px;
+        margin-right: 24px;
+        
+    }
+}
+
+@media print {
+    .summary img {
+        max-width: 180px;
+    }
+}
+
+.clear {
+    clear: both;
 }
 
 .link {
@@ -86,6 +111,12 @@
         transform: scale(1);
 
         background-color: black;
+    }
+}
+
+@media print {
+    .project {
+        margin-top: 0px;
     }
 }
 

@@ -9,6 +9,7 @@ const mimeTypes = {
     jpeg: 'image/jpeg',
     jpg: 'image/jpeg',
     png: 'image/png',
+    webp: 'image/webp',
     js: 'text/javascript',
     css: 'text/css'
 };

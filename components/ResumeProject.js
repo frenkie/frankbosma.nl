@@ -1,13 +1,16 @@
 import styles from './resumeProject.module.scss';
 import ReactMarkdown from 'react-markdown';
+import {firstImage} from '../includes/libs/images.js';
 
 export default function ResumeProject ({ project }) {
 
-    const { title, job, resume, shoutout, period, hyperlink, hyperlink_label, tags, cv_page_break } = project;
+    const { title, job, resume, images, shoutout, period, hyperlink, hyperlink_label, tags, cv_page_break } = project;
     const link = hyperlink ?  <a href={hyperlink} className={styles.link}><span className={styles['link-text']}>{ ( hyperlink_label ? hyperlink_label : 'go' ) }</span></a> : null ;
     const projPeriod = period ? <span className={styles.period}>{period}</span> : null;
     const shout = shoutout ? <p className={styles.shoutout}>{ shoutout }</p> : null;
     const jobTitle = job ? <p className={styles.job}>{ job }</p> : null;
+
+    const img = firstImage(images, styles, false);
 
     const tagList = ( () => {
         if ( tags && tags.length ) {
@@ -26,7 +29,13 @@ export default function ResumeProject ({ project }) {
                 {jobTitle}
                 {shout}
                 {tagList}
-                <div className={styles.summary}><ReactMarkdown source={resume} /></div>
+                <div className={styles.summary}>
+                    {img}
+                    <div>
+                        <ReactMarkdown source={resume}/>
+                    </div>
+                    <div className={styles.clear}></div>
+                </div>
                 {link}
             </div>
             {cv_page_break && <div className="page-break"></div>}

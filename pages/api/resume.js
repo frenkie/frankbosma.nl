@@ -44,6 +44,15 @@ export default (req, res) => {
                           shoutout,
                           title,
                           job,
+                         images {
+                            image {
+                              ext,
+                              formats,
+                              hash,
+                              height
+                              width,
+                            }
+                          },                              
                           tags {
                             id,
                             name
